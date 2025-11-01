@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Email</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Send Email</h1>
+            <form action="/send" method="post">
+                <div class="form-group">
+                    <label for="to">To</label>
+                    <input type="email" id="to" name="to" placeholder="example@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="cc">CC</label>
+                    <input type="email" id="cc" name="cc" placeholder="example1@gmail.com, example2@gmail.com" multiple>
+                </div>
+                <div class="form-group">
+                    <label for="bcc">BCC</label>
+                    <input type="email" id="bcc" name="bcc" placeholder="example1@gmail.com, example2@gmail.com" multiple>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="body">Body</label>
+                    <textarea id="body" name="body" rows="10" required></textarea>
+                </div>
+                <div class="actions">
+                    <input type="submit" value="Send Email">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
